@@ -6,8 +6,19 @@ folder_name="art"
 full_path="$cs/$folder_name"
 
 text="$*"
+banner=$(figlet -k)
 
-final_text=$(figlet -k "$text")
+while getopts ":b:" opt; do
+  case ${opt} in
+    b )
+      banner=${OPTARG}
+      ;;
+    \? ) echo "Usage: draw [-b optional] 'text'"
+      ;;
+  esac
+done
+
+final_text=$(eval "$banner <<< "$text"")
 
 if [ $# -eq 0 ]; then
 echo Paste your draw: 
