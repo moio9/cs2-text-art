@@ -4,7 +4,7 @@ Script that allows text drawing in cs2 chat by using files.
 #_USAGE_
 Open the script end edit the path to the game if needed
 ```sh
-./draw.sh 'your text' or just press 'enter'
+./draw.sh -b(optional "change banner -arg") 'your text' or just press 'enter'
 ```
 After the files has been created open in game _console_ and type:
 ```
