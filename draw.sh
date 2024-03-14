@@ -6,7 +6,7 @@ folder_name="art"
 full_path="$cs/$folder_name"
 
 text="$*"
-banner=$(figlet -k)
+banner="figlet -k"
 
 while getopts ":b:" opt; do
   case ${opt} in
