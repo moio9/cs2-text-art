@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cs="enter/your/path"
+cs="$HOME/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg" #edit this if needed
 folder_name="art"
 full_path="$cs/$folder_name"
 
