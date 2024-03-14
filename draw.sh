@@ -11,14 +11,17 @@ banner="figlet -k"
 while getopts ":b:" opt; do
   case ${opt} in
     b )
-      banner=${OPTARG}
+      banner="${OPTARG}"
       ;;
     \? ) echo "Usage: draw [-b optional] 'text'"
       ;;
   esac
 done
+shift $((OPTIND -1))
 
-final_text=$(eval "$banner <<< "$text"")
+text="$1"
+echo "$text"
+final_text=$(eval "$banner $banner_args \"$text\"")
 
 if [ $# -eq 0 ]; then
 echo Paste your draw: 
